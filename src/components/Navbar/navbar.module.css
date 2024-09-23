@@ -8,6 +8,7 @@
 
 .toggle {
 
+
   position: absolute;
   right: -18px;
   top: 50%;
@@ -52,12 +53,22 @@
   padding: 30px;
 }
 
+
 .ul li {
+
+}
+
+.ul{
+
   list-style: none;
+  padding: 0;
+}
+
+.ul li{
   padding: 20px 0px;
 }
 
-.navbarContainer {
+.navbarContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
