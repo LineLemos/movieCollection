@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from "./service.module.css";
 
 const FavoriteAction = ({ movie }) => {
     const [favorites, setFavorites] = useState ([]);
@@ -25,9 +26,16 @@ const FavoriteAction = ({ movie }) => {
     const isFavorite = favorites.some(fav => fav.id === movie.id);
 
     return (
-        <button onClick={operationFavorite}>
-            {isFavorite ? 'Remover Favoritos' : 'Adicionar Favoritos'}
+      <div className={styles.favbutton}>
+        <button
+          onClick={operationFavorite}
+          style={{
+            backgroundColor: isFavorite ? "#ff6b6b" : "rgb(236, 223, 99)",
+          }}
+        >
+          {isFavorite ? "Remover Favoritos" : "Adicionar Favoritos"}
         </button>
+      </div>
     );
 };
 

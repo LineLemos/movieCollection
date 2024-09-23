@@ -53,6 +53,7 @@ function AppMovies() {
           movies.map((movie) => (
             <div className={styles.movies} key={movie.id}>
               <h2 className={styles.movieTitle}>{movie.title}</h2>
+              <p> <img className={styles.starIcon} src="https://cdn-icons-png.freepik.com/512/2107/2107957.png" alt="" /> {movie.vote_average}</p>
               <p className={styles.movieDate}>{movie.release_date}</p>
               <img
                 className={styles.movieImg}
@@ -61,7 +62,7 @@ function AppMovies() {
               />
               {/* <Button text='Adicionar aos favoritos' img /> */}
               
-              <button type="submit" onClick={() => details(movie.id)}> Detalhes </button>
+              <button className={styles.detailsbtn} type="submit" onClick={() => details(movie.id)}> Acessar Detalhes </button>
               <p><FavoriteAction movie={movie} /></p>
               
             </div>

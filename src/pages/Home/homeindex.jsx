@@ -9,7 +9,7 @@ function HomeItem() {
   const navigate = useNavigate();
 
   return (
-    <div className="logoimg">
+    <div className={styles.container}>
       <NavbarItem />
       <AppMovies />
     </div>

@@ -1,6 +1,6 @@
 .container{
-  height: 100%;
-  position: fixed;
+  height: 100vh;
+  position: relative;
   background: linear-gradient(to right, #750c0c, #e28383);
   align-items: center;
   text-align: center;
@@ -9,6 +9,11 @@
 
 .toggle {
 width: 0;
+position: 20px;
+left: 20px;
+background: none;
+border: none;
+color: white;
 
 
 }

@@ -8,6 +8,10 @@ const Details = () => {
 
   const [movie, setMovie] = useState(null);
 
+  const formatCurrency = (number) => {
+    return number.toLocaleString("en-US", { style: "currency", currency: "USD"})
+  }
+
   useEffect(() => {
     const getMovie = async () => {
       const result = await fetch(
@@ -22,6 +26,7 @@ const Details = () => {
 
     getMovie();
   }, [id]);
+  
 
   return (
     <div>
@@ -36,12 +41,24 @@ const Details = () => {
             {/* <AppMovies movie={movie} /> */}
             <div className={styles.movies} key={movie.id}>
               <h2 className={styles.movieTitle}>{movie.title}</h2>
+              <p> <img className={styles.starIcon} src="https://cdn-icons-png.freepik.com/512/2107/2107957.png" alt="" /> {movie.vote_average}</p>
               <p className={styles.movieDate}>{movie.release_date}</p>
               <img
                 className={styles.movieImg}
                 src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                 alt={movie.title}
               />
+              
+              <h3>Duração: </h3>
+              <p>{movie.runtime} min</p>
+              <h3>Orçamento: </h3>
+              <p>{formatCurrency(movie.budget)}</p>
+              <h3>Receita: </h3>
+              <p>{formatCurrency(movie.revenue)}</p>
+              <p>País: {movie.production_countries[0].name}</p>
+              <p>Gêneros: {movie.genres.map(genre => genre.name).join(", ")}</p>
+              <h3>Sinopse</h3>
+              <p> {movie.overview}</p>
             </div>
           </>
         )}
