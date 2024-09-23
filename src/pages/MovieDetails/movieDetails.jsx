@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import AppMovies from "../../components/services/service";
 import styles from "../../components/services/service.module.css";
+import FormatFloat  from "../../utils/format";
 
 const Details = () => {
   const { id } = useParams();
@@ -11,6 +12,7 @@ const Details = () => {
   const formatCurrency = (number) => {
     return number.toLocaleString("en-US", { style: "currency", currency: "USD"})
   }
+
 
   useEffect(() => {
     const getMovie = async () => {
@@ -41,7 +43,7 @@ const Details = () => {
             {/* <AppMovies movie={movie} /> */}
             <div className={styles.movies} key={movie.id}>
               <h2 className={styles.movieTitle}>{movie.title}</h2>
-              <p> <img className={styles.starIcon} src="https://cdn-icons-png.freepik.com/512/2107/2107957.png" alt="" /> {movie.vote_average}</p>
+              <p> <img className={styles.starIcon} src="https://cdn-icons-png.freepik.com/512/2107/2107957.png" alt="" /> {FormatFloat(movie.vote_average)}</p>
               <p className={styles.movieDate}>{movie.release_date}</p>
               <img
                 className={styles.movieImg}

@@ -4,6 +4,7 @@ import styles from "./service.module.css";
 import FavoriteAction from './favorite';
 import { useNavigate } from "react-router-dom";
 import Details from "../../pages/MovieDetails/movieDetails";
+import FormatFloat from "../../utils/format";
 
 
 function AppMovies() {
@@ -53,7 +54,7 @@ function AppMovies() {
           movies.map((movie) => (
             <div className={styles.movies} key={movie.id}>
               <h2 className={styles.movieTitle}>{movie.title}</h2>
-              <p> <img className={styles.starIcon} src="https://cdn-icons-png.freepik.com/512/2107/2107957.png" alt="" /> {movie.vote_average}</p>
+              <p> <img className={styles.starIcon} src="https://cdn-icons-png.freepik.com/512/2107/2107957.png" alt="" /> {FormatFloat (movie.vote_average)}</p>
               <p className={styles.movieDate}>{movie.release_date}</p>
               <img
                 className={styles.movieImg}
