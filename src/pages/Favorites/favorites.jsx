@@ -4,17 +4,23 @@ import styles from "../../components/services/service.module.css";
 // import {Details} from '../MovieDetails/movieDetails';
 import {FormatFloat} from '../../utils/format';
 import {FormatDate} from '../../utils/format';
-
-
+import FavoriteAction from "../../components/services/favorite";
+import Details from "../MovieDetails/movieDetails";
+import { useNavigate } from "react-router-dom";
 
 
 const MyFavorites = () => {
     const [favorites, setFavorites] = useState([]);
   
+    function Details(movieId){
+      navigate(`/movie/${movieId}`);
+     }
+
     useEffect(() => {
         const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
         setFavorites(storedFavorites);
     }, []);
+    
     
   
     return (
@@ -30,8 +36,9 @@ const MyFavorites = () => {
             <div className={styles.movieContainer}>
               {favorites.map((movie) => (
                 <div key={movie.id} className="favorite-item">
-                  <h2>{movie.title}</h2>
-
+                  <div className={styles.movieTitle}>
+                    <h2>{movie.title}</h2>
+                  </div>
                   <p>
                     {" "}
                     <img
@@ -41,28 +48,38 @@ const MyFavorites = () => {
                     />{" "}
                     {FormatFloat(movie.vote_average)}
                   </p>
-                  
 
                   <p className={styles.movieDate}>
-                    {FormatDate(movie.release_date)}
+                    {(movie.release_date)}
                   </p>
                   <img
                     src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                     alt={movie.title}
                   />
+                  <button
+                    className={styles.detailsbtn}
+                    type="submit"
+                    onClick={() => Details(movie.id)}
+                  >
+                    {" "}
+                    Acessar Detalhes{" "}
+                  </button>
+              <p>
+                <FavoriteAction movie={movie} />
+              </p>
                 </div>
+                
+                
+                
               ))}
             </div>
           ) : (
             <p>Sem filmes favoritos.</p>
           )}
-
-          {/* <div>
-            <Details />
-          </div> */}
         </div>
+        
       </div>
     );
   };
 
-  export default MyFavorites;
+ export default MyFavorites

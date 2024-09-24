@@ -4,7 +4,6 @@ import AppMovies from "../../components/services/service";
 import styles from "../../components/services/service.module.css";
 import {FormatFloat}  from "../../utils/format";
 import {FormatDate} from "../../utils/format";
-import NavbarItem from "../../components/Navbar/navbarIndex";
 
 const Details = () => {
   const { id } = useParams();
@@ -34,13 +33,10 @@ const Details = () => {
 
   return (
     <div>
-      <div className={styles.navDet}>
-        <NavbarItem />
-      </div>
+      
       <div className={styles.detContainer}>
         {movie && (
           <>
-            {/* <AppMovies movie={movie} /> */}
             <div className={styles.movies} key={movie.id}>
               <h2 className={styles.movieTitle}>{movie.title}</h2>
               <p>
@@ -53,7 +49,7 @@ const Details = () => {
                 {FormatFloat(movie.vote_average)}
               </p>
               <p className={styles.movieDate}>
-                {FormatDate(movie.release_date)}
+                {(movie.release_date)}
               </p>
               <img
                 className={styles.movieImg}

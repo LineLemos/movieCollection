@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./service.module.css";
+import { useNavigate } from "react-router-dom";
 
 const FavoriteAction = ({ movie }) => {
     const [favorites, setFavorites] = useState ([]);

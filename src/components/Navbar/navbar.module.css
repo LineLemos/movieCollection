@@ -3,7 +3,7 @@
   position: relative;
   align-items: center;
   text-align: center;
-  position: fixed;
+  /* position: fixed; */
 }
 
 .toggle {
