@@ -1,13 +1,11 @@
-import Details from './movieDetails'
-import NavbarItem from '../../components/Navbar/navbarIndex'
+import Details from './movieDetails';
 
 function MainDetails(){
     return (
-        <div>
-            <NavbarItem />
-            <Details />
-        </div>
-    )
+      <>
+          <Details />
+      </>
+    );
 }
 
 export default MainDetails;

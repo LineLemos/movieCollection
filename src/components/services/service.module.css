@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+ 
   width: calc(100% + 100px);
   /* estilizaçao pra deixar os filmes centralizados */
 }
@@ -26,6 +27,10 @@
   text-align: left;
 }
 
+.favTitle{
+padding-top: 50px;
+}
+
 .searchInput {
   width: 400px;
   padding: 10px;
@@ -35,7 +40,6 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   background-color: #b4b4b4;
   transition: background-color 0.3s ease;
-  margin-bottom: 60px;
 
 }
 
@@ -52,25 +56,30 @@
   align-items: center;
   gap: 50px;
   padding: 0 2rem;
+  text-align: center;
+  margin-top: 60px;
 
 }
 .movieContainer h3, h4 {
   
   margin-bottom: 8px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   opacity: 80%;
   color: #fff;
 
 }
+.movieDate{
+  text-align: center;
+}
+
 .movieContainer p{
 
   margin-bottom: 8px;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 16px;
   opacity: 80%;
-
-
+ 
 }
 
 .movieTitle {
@@ -118,8 +127,7 @@ button {
 
 .favbutton button {
   font-family: "Inconsolata", monospace;
-  color: rgb(117, 67, 32);
-  font-weight: 900;
+  font-weight: 1000;
   padding: 10px;
   margin-top: 10px;
   border: none;
@@ -154,5 +162,29 @@ button {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  padding: 60px;
+  
+}
+
+.detailsInfo{
+  width: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #750c0c;
+  margin-top: 30px;
+}
+
+.detContainer{
+  padding-top: 50px;
+  text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    opacity: 80%;
+  
+}
+
+.detailsInfo h3{
+  background-color: #fff;
+  color: #2c2c2c;
 }
