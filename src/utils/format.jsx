@@ -6,6 +6,6 @@ export function FormatFloat (number) {
 
 
   
-export function FormatDate () {
-    return format(Date(), 'dd.MM.yyyy')
+export function FormatDate (date) {
+    return format(new Date(date), 'dd.MM.yyyy')
 };

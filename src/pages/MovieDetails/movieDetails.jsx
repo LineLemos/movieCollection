@@ -49,7 +49,7 @@ const Details = () => {
                 {FormatFloat(movie.vote_average)}
               </p>
               <p className={styles.movieDate}>
-                {(movie.release_date)}
+                {FormatDate(movie.release_date)}
               </p>
               <img
                 className={styles.movieImg}

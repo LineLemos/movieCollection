@@ -50,7 +50,7 @@ const MyFavorites = () => {
                   </p>
 
                   <p className={styles.movieDate}>
-                    {(movie.release_date)}
+                    {FormatDate(movie.release_date)}
                   </p>
                   <img
                     src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}

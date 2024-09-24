@@ -95,6 +95,10 @@ padding-top: 50px;
   height: 48px;
 }
 
+.averageVote{
+  padding: 8px 0px;
+}
+
 .starIcon {
   width: 16px;
   height: 16px;

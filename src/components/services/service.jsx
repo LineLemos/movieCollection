@@ -55,6 +55,7 @@ function AppMovies() {
           movies.map((movie) => (
             <div className={styles.movies} key={movie.id}>
               <h2 className={styles.movieTitle}>{movie.title}</h2>
+              <div className={styles.averageVote}>
               <p>
                 {" "}
                 <img
@@ -64,8 +65,9 @@ function AppMovies() {
                 />{" "}
                 {FormatFloat(movie.vote_average)}
               </p>
+              </div>
               <p className={styles.movieDate}>
-                {(movie.release_date)}
+                {FormatDate(movie.release_date)}
               </p>
               <img
                 className={styles.movieImg}
