@@ -33,7 +33,7 @@ const FavoriteAction = ({ movie }) => {
             backgroundColor: isFavorite ? "#ff6b6b" : "rgb(236, 223, 99)",
           }}
         >
-          {isFavorite ? "Remover Favoritos" : "Adicionar aos Favoritos"}
+          {isFavorite ? "Remover dos Favoritos" : "Adicionar aos Favoritos"}
         </button>
       </div>
     );

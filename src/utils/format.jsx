@@ -1,5 +1,9 @@
-function FormatFloat (number) {
+import { format } from 'date-fns'
+
+export function FormatFloat (number) {
     return number.toFixed(2)
   }
 
-export default FormatFloat 
+export function FormatDate () {
+    return format(Date(), 'dd/MM/yyyy')
+}

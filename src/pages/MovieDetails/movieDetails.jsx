@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import AppMovies from "../../components/services/service";
 import styles from "../../components/services/service.module.css";
-import FormatFloat  from "../../utils/format";
+import {FormatFloat}  from "../../utils/format";
+import {FormatDate} from "../../utils/format"
+import NavbarItems from "../../components/Navbar/navbarIndex"
 
 const Details = () => {
   const { id } = useParams();
@@ -32,11 +34,7 @@ const Details = () => {
 
   return (
     <div>
-      {/* {movie && (
-                <h1>{movie.title}</h1>
-                <p>{movie.overview}</p>
-                <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-            )} */}
+      
       <div className={styles.movieContainer}>
         {movie && (
           <>
@@ -44,7 +42,7 @@ const Details = () => {
             <div className={styles.movies} key={movie.id}>
               <h2 className={styles.movieTitle}>{movie.title}</h2>
               <p> <img className={styles.starIcon} src="https://cdn-icons-png.freepik.com/512/2107/2107957.png" alt="" /> {FormatFloat(movie.vote_average)}</p>
-              <p className={styles.movieDate}>{movie.release_date}</p>
+              <p className={styles.movieDate}>{FormatDate(movie.release_date)}</p>
               <img
                 className={styles.movieImg}
                 src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}

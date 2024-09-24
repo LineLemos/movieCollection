@@ -19,6 +19,7 @@
 }
 
 .homeTitle h1 {
+  font-family:Lobster;
   font-size: 40px;
   padding-top: 50px;
   display: flex;
@@ -146,4 +147,12 @@ button {
     align-items: center;
     gap: 50px;
     padding: 0 2rem;
+}
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 60px;
 }

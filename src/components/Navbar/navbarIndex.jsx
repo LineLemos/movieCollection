@@ -36,7 +36,7 @@ const NavbarItem = () => {
             overflow: "hidden",
             display: "flex",
             flexDirection: "column",
-            alignItems: isOpen ? "flex-start" : "center",
+
           }}
         >
           <div className={styles.navbarContainer}>
@@ -46,7 +46,7 @@ const NavbarItem = () => {
                 alt="Logo React Movies"
                 className={styles.logo}
                 style={{
-                  width: isOpen ? "150px" : "50px",
+                  width: isOpen ? "75px" : "40px",
                   transition: "width 0.3s",
                 }}
                 // className={styles.logo}

@@ -2,7 +2,7 @@ import Details from "../pages/MovieDetails/movieDetails";
 import HomeItem from "../pages/Home/homeindex";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MyFavorites from "../pages/Favorites/favorites";
-import MovieDetails from "../pages/MovieDetails/movieDetails";
+import MainDetails from "../pages/MovieDetails/details";
 
 function RoutesApp() {
   return (
@@ -11,8 +11,8 @@ function RoutesApp() {
       <div className="Routes">
         <Routes>
           <Route path="/" element={<HomeItem />} />
-          <Route path="movie/:id" element={<Details />} />
-          <Route path="/details" element={<Details />} />
+          <Route path="movie/:id" element={<MainDetails />} />
+          <Route path="/details" element={<MainDetails />} />
           <Route path="/favorites" element={<MyFavorites />} />
         </Routes>
       </div>
