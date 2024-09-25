@@ -1,8 +1,8 @@
-import styles from "./navbar.module.css";
-import React from "react";
+import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import styles from "./navbar.module.css";
 
 const NavbarItem = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +11,6 @@ const NavbarItem = () => {
     setIsOpen(!isOpen);
   };
 
-  const ToggleMenu = () => {
-    setIsMenuOpen(!setIsMenuOpen);
-  };
 
   return (
     <div className={styles.container}>

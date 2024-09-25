@@ -54,20 +54,22 @@ function AppMovies() {
         {movies && movies.length > 0 ? (
           movies.map((movie) => (
             <div className={styles.movies} key={movie.id}>
-              <h2 className={styles.movieTitle}>{movie.title}</h2>
-              <div className={styles.averageVote}>
-              <p>
-                {" "}
-                <img
-                  className={styles.starIcon}
-                  src="https://cdn-icons-png.freepik.com/512/2107/2107957.png"
-                  alt=""
-                />{" "}
-                {FormatFloat(movie.vote_average)}
-              </p>
-              </div>
+              
+                <h2 className={styles.movieTitle}>{movie.title}</h2>
+                <div className={styles.averageVote}>
+                <p>
+                  {" "}
+                  <img
+                    className={styles.starIcon}
+                    src="https://cdn-icons-png.freepik.com/512/2107/2107957.png"
+                    alt=""
+                  />{" "}
+                  {FormatFloat(movie.vote_average)}
+                </p>
+      
+            </div>
               <p className={styles.movieDate}>
-                {FormatDate(movie.release_date)}
+                {(movie.release_date)}
               </p>
               <img
                 className={styles.movieImg}

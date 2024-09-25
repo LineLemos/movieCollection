@@ -1,9 +1,9 @@
 .container {
   height: 100%;
-  position: relative;
+  /* position: relative; */
   align-items: center;
   text-align: center;
-  /* position: fixed; */
+  position: fixed;
 }
 
 .toggle {
